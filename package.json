@@ -1,8 +1,6 @@
 {
-  "name": "handlebars",
+  "name": "handlebars"2,33,
   "version": "0.0.0",
-  "private": true,
-  "scripts": {
     "start": "node ./index.js",
     "dev": "nodemon -e js,hbs,json,css ./index.js",
     "watch": "webpack --watch"

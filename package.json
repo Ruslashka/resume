@@ -1,5 +1,5 @@
 {
-  "name": "handlebars",
+ "name": "handlebars",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -17,6 +17,7 @@
     "http-errors": "~1.6.3",
     "morgan": "~1.9.1",
     "prettier-plugin-hbs": "^1.0.1"
+   
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",

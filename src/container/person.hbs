@@ -63,7 +63,12 @@
         <div>title: {{title}}</div>
         <a href="{{team_members.email}}">alice.johnson@example.com</a>
         <strong>
-            <p>skills: {{skills}} </p>
+            <ul>
+                <p>Skills:</p>
+                {{#each skills}}
+                <li>{{this}} </li>
+                {{/each}}
+            </ul>
         </strong>
         <br>
         <hr>

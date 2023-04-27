@@ -1,36 +1,93 @@
 <div>
-    <h1>{{program.excursion.name}}</h1>
-</div>
-<hr>
-<br>
-<div>
-
-    <p>Location: {{program.excursion.location.city}} {{program.excursion.location.country}}</p>
-    <p>Date: {{program.excursion.date}}</p>
-    <br>
-
-
-    <h2>{{program.excursion.program.[0].name}}</h2>
-    <p>type: {{program.excursion.program.[0].type}}</p>
-    <p>duration: {{program.excursion.program.[0].duration}} hours</p>
-    <br>
-
-    <p>Details:</p>
-    <div>
+    <main>
         {{#with program}}
         {{#with excursion}}
-        {{#with program}}
-        {{#with details}}
-        <ul>
-            <li>
-                {{museum.name}}
-            </li>
-        </ul>
+        <div>
+            <h1>Excursion {{name}}</h1>
+        </div>
+        {{#with location}}
+        <div>
+            <address>{{city}}, {{country}}</address>
+            <br>
+            <time>({{../date}})</time>
+        </div>
         {{/with}}
-        {{/with}}
-        {{/with}}
-        {{/with}}
+        <hr>
+        <div>
+            <ul>
+                {{#with program.[0]}}
+                <li>
+                    <h2>{{name}}</h2>
+                </li>
+                <div>type: {{type}}</div>
+                <div>duration: ({{duration}} hours)</div>
+                {{#with details}}
+                {{#with museum}}
+                <h3>{{name}}</h3>
+                {{#with location}}
+                <address>
+                    {{address}}, {{city}}, {{country}}
+                </address>
+                {{/with}}
+                <br>
+                <ul>
+                    {{#each exhibits}}
+                    <li><b>{{name}}</b></li>
+                    {{#unless artist}}
+                    artist: unknown
+                    {{else}}
+                    <div>artist: {{artist}}</div>
+                    {{/unless}}
+                    <div>{{description}}</div>
+                    {{#if audio_guide}}
+                    {{#with ../../guide}}
+                    <div>guide: {{name}}</div>
+                    <div>language: {{language}}</div>
+                    <div>rating: ({{rating}})</div>
+                    {{/with}}
+                    {{/if}}
+                    <br>
+                    {{/each}}
+                </ul>
+                {{/with}}
+                {{/with}}
+                {{/with}}
 
-    </div>
-
+                {{#with program.[1]}}
+                <li>
+                    <h2>{{name}}</h2>
+                </li>
+                <div>type: {{type}}</div>
+                <div>duration: ({{duration}} hours)</div>
+                {{#with details}}
+                {{#with venue}}
+                <h3>{{name}}</h3>
+                {{#with location}}
+                <address>
+                    {{address}}, {{city}}, {{country}}
+                </address>
+                {{/with}}
+                <br>
+                {{/with}}
+                <ul>
+                    {{#each performers}}
+                    <li><strong>{{name}}</strong></li>
+                    <div>{{type}}</div>
+                    {{#if ../guide}}
+                    {{#with ../guide}}
+                    <div>guide: {{name}}</div>
+                    <div>language: {{language}}</div>
+                    <div>rating: ({{rating}})</div>
+                    {{/with}}
+                    {{/if}}
+                    <br>
+                    {{/each}}
+                </ul>
+                {{/with}}
+                {{/with}}
+            </ul>
+        </div>
+        {{/with}}
+        {{/with}}
+    </main>
 </div>

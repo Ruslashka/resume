@@ -1,0 +1,27 @@
+<div>
+    <h1>{{program.excursion.name}}</h1>
+</div>
+<hr>
+<br>
+<div>
+
+    <p>Location: {{program.excursion.location.city}} {{program.excursion.location.country}}</p>
+    <p>Date: {{program.excursion.date}}</p>
+    <br>
+
+
+    <h2>{{program.excursion.program.[0].name}}</h2>
+    <p>type: {{program.excursion.program.[0].type}}</p>
+    <p>duration: {{program.excursion.program.[0].duration}} hours</p>
+
+    <p>Details:</p>
+
+    {{#with details}}
+    <ul>
+        <li>
+            Museum: {{name}}
+        </li>
+    </ul>
+    {{/with}}
+
+</div>

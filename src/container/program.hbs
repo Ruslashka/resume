@@ -13,15 +13,24 @@
     <h2>{{program.excursion.program.[0].name}}</h2>
     <p>type: {{program.excursion.program.[0].type}}</p>
     <p>duration: {{program.excursion.program.[0].duration}} hours</p>
+    <br>
 
     <p>Details:</p>
+    <div>
+        {{#with program}}
+        {{#with excursion}}
+        {{#with program}}
+        {{#with details}}
+        <ul>
+            <li>
+                {{museum.name}}
+            </li>
+        </ul>
+        {{/with}}
+        {{/with}}
+        {{/with}}
+        {{/with}}
 
-    {{#with details}}
-    <ul>
-        <li>
-            Museum: {{name}}
-        </li>
-    </ul>
-    {{/with}}
+    </div>
 
 </div>

@@ -1,0 +1,107 @@
+<div>
+    <main>
+        <dl>
+
+            <dd>{{> title data="JavaScript" big=false }}</dd>
+            <hr>
+            <dt><span class="badge text-bg-success">{{description}}</span></dt>
+        </dl>
+        {{#with history}}
+        <div>
+            <time><b>year:({{year}})</b></time>
+            <p><b>founder:{{founder}}</b></p>
+        </div>
+        {{/with}}
+        <hr>
+        <br>
+
+        <h3>Types</h3>
+        {{#each types}}
+        <div>
+            <ul>
+                <li>
+                    <p><span class="badge text-bg-warning">{{this}}</span></p>
+                </li>
+            </ul>
+        </div>
+        {{/each}}
+        <hr>
+        <br>
+        <h2><span class="badge rounded-pill text-bg-info">Syntax:</span></h2>
+
+        <br>
+
+        <div>
+
+            {{#with syntax}}
+            <h3><span class="badge rounded-pill text-bg-dark">Variables</span></h3>
+            {{#each variables}}
+            <ul>
+                <li>{{this}}</li>
+            </ul>
+            {{/each}}
+            <h3><span class="badge rounded-pill text-bg-dark">Functions</span></h3>
+            {{#each functions}}
+            <ul>
+                <li>{{this}}</li>
+            </ul>
+            {{/each}}
+            <h3><span class="badge rounded-pill text-bg-dark">Conditionals</span></h3>
+            {{#each conditionals}}
+            <ul>
+                <li>{{this}}</li>
+            </ul>
+            {{/each}}
+            <h3><span class="badge rounded-pill text-bg-dark">Loops</span></h3>
+            {{#each loops}}
+            <ul>
+                <li>{{this}}</li>
+            </ul>
+            {{/each}}
+            <h3><span class="badge rounded-pill text-bg-dark">Llasses</span></h3>
+            {{#each classes}}
+            <ul>
+                <li>{{this}}</li>
+            </ul>
+            {{/each}}
+            {{/with}}
+
+            <hr>
+            <br>
+            <h3><span class="badge text-bg-warning">Features:</span></h3>
+            {{#each features}}
+            <ul>
+                <li><span class="badge text-bg-primary">{{this}}</span></li>
+            </ul>
+            {{/each}}
+            <hr>
+            <br>
+
+            <h3><span class="badge text-bg-warning">libraries:</span></h3>
+            {{#each libraries}}
+            <ul>
+                <li><span class="badge text-bg-primary">{{this}}</span></li>
+            </ul>
+            {{/each}}
+            <hr>
+            <br>
+
+            <h3><span class="badge text-bg-warning">tools:</span></h3>
+            {{#each tools}}
+            <ul>
+                <li><span class="badge text-bg-primary">{{this}}</span></li>
+            </ul>
+            {{/each}}
+        </div>
+        <hr>
+        <br>
+        <h3><span class="badge text-bg-secondary">Community</span></h3>
+        {{#each community}}
+        <ul>
+            <li>
+                {{name}} ({{type}})
+            </li>
+        </ul>
+        {{/each}}
+    </main>
+</div>

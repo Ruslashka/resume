@@ -1,0 +1,151 @@
+<div>
+    <main>
+        <span class="badge text-bg-primary">{{> title data="Facebook" big=false }}</span>
+        <hr>
+        <br>
+        <div>
+            <ul>Users:{{#each users}}
+                <li>id: {{id}} </li>
+                <li>name: {{name}} </li>
+                <li>gender: {{gender}} </li>
+                <li>age: {{age}} </li>
+            </ul>
+        </div>
+        <br>
+        <div>
+            <ul>
+                Friends: {{#each friends}}
+                <li>id: {{id}} </li>
+                <li>name: {{name}} </li>
+                <li>gender: {{gender}} </li>
+                <li>age: {{age}} </li>
+            </ul>
+        </div>
+        <br>
+        <div>
+            <ul>
+                Mutual_friends: {{#each mutual_friends}}
+                <li>id: {{id}} </li>
+                <li>name: {{name}} </li>
+                <li>gender: {{gender}} </li>
+                <li>age: {{age}} </li>
+                {{/each}}
+            </ul>
+        </div>
+        <br>
+        <div>
+            <ul>
+                Mutual_friends: {{#each mutual_friends}}
+                <li>id: {{id}} </li>
+                <li>name: {{name}} </li>
+                <li>gender: {{gender}} </li>
+                <li>age: {{age}} </li>
+                {{/each}}
+            </ul>
+        </div>
+        <div>
+            <ul>
+                {{#if groups}}
+                Groups: {{#each groups}}
+                <li>id:{{id}}</li>
+                <li>name:{{name}}</li>
+                <li>description:{{description}}</li>
+            </ul>
+        </div>
+        <br>
+        <div>
+            <ul>
+                Members: {{#each members}}
+                <li>id: {{id}} </li>
+                <li>name: {{name}} </li>
+                <li>gender: {{gender}} </li>
+                <li>age: {{age}} </li>
+                {{/each}}
+            </ul>
+        </div>
+        <br>
+        <div>
+            <ul>
+                Members: {{#each members}}
+                <li>id: {{id}} </li>
+                <li>name: {{name}} </li>
+                <li>gender: {{gender}} </li>
+                <li>age: {{age}} </li>
+                {{/each}}
+            </ul>
+        </div>
+        {{/each}}
+        {{/if}}
+        <div>
+            <ul>
+                {{#each friends}}
+                <li>id: {{id}} </li>
+                <li>name: {{name}} </li>
+                <li>gender: {{gender}} </li>
+                <li>age: {{age}} </li>
+            </ul>
+        </div>
+        <br>
+        <div>
+            <ul>
+
+                {{#each mutual_friends}}
+                <li>id: {{id}} </li>
+                <li>name: {{name}} </li>
+                <li>gender: {{gender}} </li>
+                <li>age: {{age}} </li>
+            </ul>
+        </div>
+        <br>
+        <div>
+            <ul>
+                {{#if mutual_friends}}
+                {{#each mutual_friends}}
+                <li>id: {{id}} </li>
+                <li>name: {{name}} </li>
+                <li>gender: {{gender}} </li>
+                <li>age: {{age}} </li>
+                {{/each}}
+                {{/if}}
+            </ul>
+        </div>
+        {{/each}}
+
+        <br>
+        <div>
+            <ul>
+                {{#if groups}}
+                Groups: {{#each groups}}
+                <li>id:{{id}}</li>
+                <li>name:{{name}}</li>
+                <li>description:{{description}}</li>
+            </ul>
+        </div>
+        <br>
+        <div>
+            <ul>
+                {{#each members}}
+                <li>id: {{id}} </li>
+                <li>name: {{name}} </li>
+                <li>gender: {{gender}} </li>
+                <li>age: {{age}} </li>
+                {{/each}}
+            </ul>
+        </div>
+        <br>
+        <div>
+            <ul>
+                {{#each members}}
+                <li>id: {{id}} </li>
+                <li>name: {{name}} </li>
+                <li>gender: {{gender}} </li>
+                <li>age: {{age}} </li>
+                {{/each}}
+            </ul>
+        </div>
+        {{/each}}
+        {{/if}}
+        {{/each}}
+        {{/each}}
+    </main>
+</div>

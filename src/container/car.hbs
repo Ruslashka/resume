@@ -1,0 +1,242 @@
+<div>
+    <main>
+        <span class="badge text-bg-dark">{{> title data="Car Toyota" big=false }}</span>
+        <div>
+            <h5>
+                <div><span class="badge text-bg-light">marke: {{marke}}</span></div>
+                <div><span class="badge text-bg-light">model: {{model}}</span></div>
+                <div><span class="badge text-bg-light">year: {{year}}</span></div>
+                <div><span class="badge text-bg-light">color: {{color}}</span></div>
+            </h5>
+        </div>
+        <hr>
+        <br>
+        <button type="button" class="btn btn-primary">
+            <h1>Features:</h1>
+        </button>
+        <br>
+        <br>
+        <br>
+        <div> <button type="button" class="btn btn-warning">
+                <h2>Interior:</h2>
+        </div>
+        <hr>
+        <br>
+        {{#with features}}
+
+        {{#with interior}}
+        <button type="button" class="btn btn-warning">
+            <h3>Seats:</h3>
+        </button>
+        {{#with seats}}
+        <div>
+            <div>material:<span class="badge text-bg-info"> {{material}}</span></div>
+            <div>color:<span class="badge text-bg-info"> {{color}}</span></div>
+            <div>heated: {{#if true}}✅{{/if}}</div>
+            <div>ventilated: {{#if true}}✅{{/if}}</span></div>
+        </div>
+        {{/with}}
+        <br>
+
+        <button type="button" class="btn btn-warning">
+            <h3>Dashboard:</h3>
+        </button>
+        {{#with dashboard}}
+
+        <div>
+            <div>material:<span class="badge text-bg-info">{{material}}</span></div>
+            <div>color:<span class="badge text-bg-info"> {{color}}</span> </div>
+        </div>
+        <br>
+
+        <button type="button" class="btn btn-warning">
+            <h3>Display:</h3>
+        </button>
+        {{#with display}}
+
+        <div>type:<span class="badge text-bg-info">{{type}}</span></div>
+        <div>size:<span class="badge text-bg-info">{{size}}</span></div>
+        <div>resolution:<span class="badge text-bg-info">{{resolution}}</span></div>
+        <div>touchscreen:{{#if true}}✅{{/if}}</div>
+        {{/with}}
+        {{/with}}
+        <br>
+
+        <button type="button" class="btn btn-warning">
+            <h3>Audio:</h3>
+        </button>
+        {{#with audio}}
+        <div>system:<span class="badge text-bg-info">{{system}}</span></div>
+        <div>speakers:<span class="badge text-bg-info">{{speakers}}</span></div>
+        <div>subwoofer:{{#if true}}✅{{/if}}</div>
+        <div>bluetooth:{{#if true}}✅{{/if}}</div>
+        <div>USB:{{#if true}}✅{{/if}}</div>
+        {{/with}}
+        {{/with}}
+        <hr>
+        <br>
+
+        <button type="button" class="btn btn-success">
+            <h2>Exterior:</h2>
+        </button>
+        {{#with exterior}}
+        <br>
+        <br>
+        <div>
+            <button type="button" class="btn btn-warning">
+                <h3>Wheels:</h3>
+            </button>
+        </div>
+        {{#with wheels}}
+        <div>
+            <div>size:<span class="badge text-bg-dark">{{size}}</span></div>
+            <div>type:<span class="badge text-bg-dark">{{type}}</span></div>
+            <div>color:<span class="badge text-bg-dark">{{color}}</span></div>
+        </div>
+        {{/with}}
+        <br>
+
+        <div>
+            <button type="button" class="btn btn-warning">
+                <h3>Headlights:</h3>
+            </button>
+        </div>
+        {{#with headlights}}
+        <div>
+            <div>type:<span class="badge text-bg-dark">{{type}}</span></div>
+            <div>brightness:<span class="badge text-bg-dark">{{brightness}}</span></div>
+            <div>automatic:{{#if true}}✅{{/if}}</div>
+        </div>
+        {{/with}}
+        <br>
+
+        <div>
+            <button type="button" class="btn btn-warning">
+                <h3>Sunroof:</h3>
+            </button>
+        </div>
+        {{#with sunroof}}
+        <div>
+            <div>type:<span class="badge text-bg-dark">{{type}}</span></div>
+            <div>size:<span class="badge text-bg-dark">{{size}}</span></div>
+            <div>automatic:{{#if true}}✅{{/if}}</div>
+        </div>
+        {{/with}}
+        {{/with}}
+        <br>
+
+        <button type="button" class="btn btn-warning">
+            <h3>Safety:</h3>
+        </button>
+        {{#with safety}}
+        <br>
+
+        <button type="button" class="btn btn-secondary">
+            <h4>Airbags:</h4>
+        </button>
+        {{#with airbags}}
+        <div>
+            <div>front:<span class="badge text-bg-dark">{{front}}</span></div>
+            <div>side:<span class="badge text-bg-dark">{{side}}</span></div>
+            <div>knee:<span class="badge text-bg-dark">{{knee}}</span></div>
+            <div>rear:<span class="badge text-bg-dark">{{rear}}</span></div>
+        </div>
+        {{/with}}
+        <br>
+
+        <button type="button" class="btn btn-secondary">
+            <h4>Assistance:</h4>
+        </button>
+        {{#with assistance}}
+        <div>
+            <div>blind_spot_monitoring:{{#if true}}✅{{/if}}</div>
+            <div>rear_cross_traffic_alert:{{#if true}}✅{{/if}}</div>
+            <div>autolane_departure_warningatic:{{#if true}}✅{{/if}}</div>
+            <div>adaptive_cruise_control:{{#if true}}✅{{/if}}</div>
+            <div>collision_warning:{{#if true}}✅{{/if}}</div>
+        </div>
+        {{/with}}
+        {{/with}}
+        {{/with}}
+        <hr>
+        <br>
+
+        <div>
+            <button type="button" class="btn btn-dark">
+                <h2>Engine:</h2>
+            </button>
+        </div>
+        {{#with engine}}
+        <div>
+            <div>type:<span class="badge text-bg-danger">{{type}}</span></div>
+            <div>displacement:<span class="badge text-bg-danger">{{displacement}}</span></div>
+            <div>horsepower:<span class="badge text-bg-danger">{{horsepower}}</span></div>
+            <div>torque:<span class="badge text-bg-danger">{{torque}}</span></div>
+        </div>
+        <br>
+
+        <div>
+            <button type="button" class="btn btn-light">Transmission:
+                <h3>Transmission:</h3>
+            </button>
+        </div>
+        {{#with transmission}}
+        <div>
+            <div>type:<span class="badge text-bg-danger">{{type}}</span></div>
+            <div>gears:<span class="badge text-bg-danger">{{gears}}</span></div>
+        </div>
+        {{/with}}
+        {{/with}}
+        <hr>
+        <br>
+
+        <div>
+            <button type="button" class="btn btn-info">
+                <h3>Fuel_economy</h3>
+            </button>
+        </div>
+        {{#with fuel_economy}}
+        <div>
+            <div>city:<span type=class="btn btn-primary">{{city}}</span></div>
+            <div>highway:<span class="btn btn-primary">{{highway}}</span></div>
+            <div>combined:<span class="btn btn-primary">{{combined}}</span></div>
+        </div>
+        {{/with}}
+        <br>
+
+        <div>
+            <button type="button" class="btn btn-danger">
+                <h3>Price</h3>
+            </button>
+        </div>
+        {{#with price}}
+        <div>
+            <div>base:<span class="btn btn-success">{{base}}</span></div>
+            <div>base:<span class="btn btn-success">{{base}}</span></div>
+        </div>
+        <br>
+        <div>
+            <button type="button" class="btn btn-warning">
+                <h4>Options:</h4>
+            </button>
+        </div>
+        {{#with options}}
+        <div>
+            <div>navigation:<span class="btn btn-success">{{navigation}}</span></div>
+            <div>moonroof:<span class="btn btn-success">{{moonroof}}</span></div>
+            <div>premium_paint:<span class="btn btn-success">{{premium_paint}}</span></div>
+        </div>
+        {{/with}}
+        <hr>
+        <br>
+
+        <h3>Total:<span class="btn btn-success">{{total}}</span></h3></span>
+</div>
+
+{{/with}}
+
+
+
+</div>
+</main>
+</div>

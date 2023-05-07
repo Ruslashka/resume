@@ -82,15 +82,66 @@
         <div class="card col-2">
             {{#each action_block}}
             {{#if isSuccess}}
-            <button class="btn btn-success">{{text}}</button>
+            <div><button class="btn btn-success mt-2">{{text}}</button></div>
             {{/if}}
             {{#if isDanger}}
-            <button class="btn btn-success btn-sm">{{text}}</button>
+            <div><button class="btn btn-success mt-2">{{text}}</button></div>
             {{/if}}
             {{#if isInfo}}
-            <div><button class="btn btn-success btn-sm">{{text}}</button></div>
+            <div><button class="btn btn-success mt-2 mb-1">{{text}}</button></div>
             {{/if}}
             {{/each}}
         </div>
     </div>
+
+    <div class="row mt-2">
+        <div class="card col-2">
+            {{#with total}}
+            <h3>{{title}}</h3>
+            {{#each item_list}}
+            <div>
+                {{name}}:
+                {{price}}
+            </div>
+            {{/each}}
+            <hr>
+
+            {{#each additional_info}}
+            <div>
+                {{text}}:
+                {{value}}
+            </div>
+            {{/each}}
+            <hr>
+
+            {{#with total_price}}
+            <div>
+                {{text}}:
+                {{value}}
+            </div>
+            {{/with}}
+            <hr>
+
+            {{#each button}}
+            {{#if isPrimary}}
+            <div><button class="btn btn-primary">{{text}}</button></div>
+            {{/if}}
+            {{#if isOutline}}
+            <div><button class="btn btn-outline-primary mt-1 mb-1">{{text}}</button></div>
+            {{/if}}
+            {{/each}}
+            {{/with}}
+        </div>
+    </div>
+
+    <hr>
+
+    {{#with}}
+    <div class="row">
+
+        <div class="card col-8">
+            <label for=""></label>
+        </div>
+    </div>
+
 </main>

@@ -771,6 +771,7 @@ router.get('/mac', function (req, res) {
       ],
     },
   })
+  })
   // ============================                 
 
 router.get('/program', function (req, res) {
@@ -1078,6 +1079,7 @@ router.get('/js', function (req, res) {
         type: 'blog',
       },
     ],
+  })
   })
   //                  ↑↑ сюди вводимо JSON дані
 // ================================================================

@@ -1,30 +1,37 @@
-{{!--
-Це леяут по замовчюванню, котрий вже містить базову структуру HTML документа
-І котрий обгортає код container файлів для будь-яких ендпоїнтів
---}}
 <!DOCTYPE html>
 <html>
 
 <head>
+
+    </title>
+    <meta charset='utf-8' />
+    <link href='css/index.css' rel='stylesheet' />
+
 	<title>
-<<<<<<< HEAD
-		Bio
-=======
+
 		Bio page
->>>>>>> dc9dfc3d4ad6c510858ba1d031e9ac0bec9554b1
+
 	</title>
 	<meta charset='utf-8' />
 	<link href='css/index.css' rel='stylesheet' />
+
 </head>
 
 <body>
 
-<<<<<<< HEAD
-=======
+
+
+{{! ↓ ця кострукція показує куди шаблонізатору треба вставляти код з container файлу --}}
+
+
+    {{{body}}}
+
 
 	{{! ↓ ця кострукція показує куди шаблонізатору треба вставляти код з container файлу --}}
->>>>>>> dc9dfc3d4ad6c510858ba1d031e9ac0bec9554b1
+
+
 	{{{body}}}
+
 
 
 </body>

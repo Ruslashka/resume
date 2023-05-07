@@ -38,13 +38,15 @@
             <ul class="nav nav-tabs">
                 {{#each tabs}}
 
-                <a href="#" class="nav-link 
-                {{#if isActive}} 
-                active {{/if}}
-                 {{#if isDisabled}} 
-                 disabled 
-                 {{/if}}">
-                    {{text}}</a>
+                <li>
+                    <a href="#" class="nav-link
+                    {{#if isActive}}
+                    active {{/if}}
+                     {{#if isDisabled}}
+                     disabled
+                     {{/if}}">
+                        {{text}}</a>
+                </li>
 
                 {{/each}}
             </ul>

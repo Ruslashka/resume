@@ -599,4 +599,14 @@ router.get('/bootstrap', function (req, res) {
 })
 
 // ================================================================
+//           ↙ тут вводимо шлях (PATH) до сторінки
+router.get('/bootstrapicon', function (req, res) {
+  // res.render генерує нам HTML сторінку
+
+  //            ↙ cюди вводимо назву файлу з сontainer
+  res.render('bootstrapicon', {
+    layout: 'basic',
+  })
+  //                  ↑↑ сюди вводимо JSON дані
+})
 module.exports = router

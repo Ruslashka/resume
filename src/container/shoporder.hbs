@@ -25,43 +25,45 @@
         {{/if}}
         {{/each}}
     </div>
+    <section>
 
-    {{#with form}}
-    {{#with input}}
-    <div class="row mt-4">
-        <div class="col-5">
-            {{#with surname}}
-            <label class="form label">{{label}}</label>
-            <input class="form-control" placeholder="{{placeholder}}">
-            <div class="form text">{{caption}}</div>
-            {{/with}}
+        {{#with form}}
+        {{#with input}}
+        <div class="row mt-4">
+            <div class="col-8">
+                {{#with surname}}
+                <label class="form label">{{label}}</label>
+                <input class="form-control" placeholder="{{placeholder}}">
+                <div class="form text">{{caption}}</div>
+                {{/with}}
+
+
+
+                {{#with name}}
+                <label class="form label">{{label}}</label>
+                <input class="form-control" placeholder="{{placeholder}}">
+                <div class="form text">{{caption}}</div>
+                {{/with}}
+            </div>
+
+            <div class="col-4 mt-3">
+                {{#with phone}}
+                <label class="form label">{{label}}</label>
+                <input class="form-control" placeholder="{{placeholder}}">
+                <div class="form text">{{caption}}</div>
+                {{/with}}
+
+
+
+                {{#with email}}
+                <label class="form label">{{label}}</label>
+                <input class="form-control" placeholder="{{placeholder}}">
+                <div class="form text">{{caption}}</div>
+                {{/with}}
+            </div>
         </div>
-
-        <ol class="col-5">
-            {{#with name}}
-            <label class="form label">{{label}}</label>
-            <input class="form-control" placeholder="{{placeholder}}">
-            <div class="form text">{{caption}}</div>
-            {{/with}}
-        </ol>
-
-        <div class="col-5 mt-3">
-            {{#with phone}}
-            <label class="form label">{{label}}</label>
-            <input class="form-control" placeholder="{{placeholder}}">
-            <div class="form text">{{caption}}</div>
-            {{/with}}
-        </div>
-
-        <div class="col-5 mt-3">
-            {{#with email}}
-            <label class="form label">{{label}}</label>
-            <input class="form-control" placeholder="{{placeholder}}">
-            <div class="form text">{{caption}}</div>
-            {{/with}}
-        </div>
-    </div>
-    {{/with}}
+        {{/with}}
+    </section>
 
 
     <hr class="col-10">
@@ -93,7 +95,6 @@
             {{/each}}
         </div>
     </div>
-
     <div class="row mt-2">
         <div class="card col-2">
             {{#with total}}
@@ -105,7 +106,6 @@
             </div>
             {{/each}}
             <hr>
-
             {{#each additional_info}}
             <div>
                 {{text}}:
@@ -113,7 +113,6 @@
             </div>
             {{/each}}
             <hr>
-
             {{#with total_price}}
             <div>
                 {{text}}:
@@ -121,7 +120,6 @@
             </div>
             {{/with}}
             <hr>
-
             {{#each button}}
             {{#if isPrimary}}
             <div><button class="btn btn-primary">{{text}}</button></div>
@@ -134,16 +132,28 @@
         </div>
     </div>
 
+
     <hr>
 
-    <div class="row">
-        <div class="card col-8">
+    <div class="card">
+        <div class="row p-3">
             {{#with delivery}}
             <h3>{{title}}</h3>
             {{#each select}}
             <label class="form-label">{{label}}</label>
-            <div class="col-2">
-                <select class="form-select mb-2">
+            <div class="col-8">
+                <select class="form-select mb-4">
+                    <option selected>{{placeholder}}</option>
+                    {{#each options}}
+                    <option value="{{value}}">{{text}}</option>
+                    {{/each}}
+                    {{!--
+                </select> --}}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                {{!-- <select class="form-select mb-2"> --}}
                     <option selected>{{placeholder}}</option>
                     {{#each options}}
                     <option value="{{value}}">{{text}}</option>
@@ -280,4 +290,4 @@
 
 
 
-</main>
+</main>0

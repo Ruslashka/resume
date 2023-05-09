@@ -110,16 +110,29 @@
 
     <hr class="mt-5">
 
+    <div class="row gy-5">
+        {{#each footer}}
+        <div class="nav col-2">
+            <div>
+                {{#each this}}
+                <div>
+                    <a class="nav-1 btn btn-link" href="{{link}}">{{text}}</a>
+                </div>
+                {{/each}}
+            </div>
+
     <div class="row">
         <div class="col-2">
-<<<<<<< HEAD
+
             {{#each footer}}
-=======
+
             {{#each ../footer}}
->>>>>>> ca351b56e3074a6e543fee2ca0ba13e0ab3e5607
+
             <a class="btn btn-link" href="{{link}}">{{text}}</a>
             {{/each}}
+
         </div>
+        {{/each}}
 
     </div>
 </main>

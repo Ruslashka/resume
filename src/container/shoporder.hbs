@@ -25,7 +25,12 @@
         {{/if}}
         {{/each}}
     </div>
+
+
     <section>
+
+    <section>
+
 
         {{#with form}}
         {{#with input}}
@@ -37,8 +42,6 @@
                 <div class="form text">{{caption}}</div>
                 {{/with}}
 
-
-
                 {{#with name}}
                 <label class="form label">{{label}}</label>
                 <input class="form-control" placeholder="{{placeholder}}">
@@ -46,12 +49,17 @@
                 {{/with}}
             </div>
 
+
+
             <div class="col-4 mt-3">
                 {{#with phone}}
                 <label class="form label">{{label}}</label>
                 <input class="form-control" placeholder="{{placeholder}}">
                 <div class="form text">{{caption}}</div>
                 {{/with}}
+
+
+
 
 
 
@@ -95,6 +103,10 @@
             {{/each}}
         </div>
     </div>
+
+
+
+
     <div class="row mt-2">
         <div class="card col-2">
             {{#with total}}
@@ -106,6 +118,9 @@
             </div>
             {{/each}}
             <hr>
+
+
+
             {{#each additional_info}}
             <div>
                 {{text}}:
@@ -113,6 +128,10 @@
             </div>
             {{/each}}
             <hr>
+
+
+
+
             {{#with total_price}}
             <div>
                 {{text}}:
@@ -120,6 +139,8 @@
             </div>
             {{/with}}
             <hr>
+
+
             {{#each button}}
             {{#if isPrimary}}
             <div><button class="btn btn-primary">{{text}}</button></div>
@@ -137,6 +158,167 @@
 
     <div class="card">
         <div class="row p-3">
+
+            <hr>
+
+            <div class="row">
+                <div class="card col-8">
+
+                    {{#with delivery}}
+                    <h3>{{title}}</h3>
+                    {{#each select}}
+                    <label class="form-label">{{label}}</label>
+                    <div class="col-8">
+
+                        <div class="col-4">
+
+                            <select class="form-select mb-2">
+                                <option selected>{{placeholder}}</option>
+                                {{#each options}}
+                                <option value="{{value}}">{{text}}</option>
+                                {{/each}}
+                                {{!--
+                            </select> --}}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            {{!-- <select class="form-select mb-2"> --}}
+                                <option selected>{{placeholder}}</option>
+                                {{#each options}}
+                                <option value="{{value}}">{{text}}</option>
+                                {{/each}}
+
+                            </select>
+                        </div>
+                        {{/each}}
+                    </div>
+                </div>
+
+                <div class="col-4 mt-3">
+                    {{#each delivery_type}}
+                    <div class="form-check">
+                        <label class="form-check-label">{{type}}</label>
+                        <input type="radio" class="form-check-input">
+                    </div>
+                    {{/each}}
+                </div>
+
+                <hr>
+
+                {{#with payment}}
+                <h3>{{title}}</h3>
+
+                {{#each list}}
+                <div class="form-check">
+                    <label class="form-check-label">{{type}}</label>
+                    <input type="radio" class="form-check-input">
+                    <div class="form text">{{description}}</div>
+                </div>
+                {{/each}}
+                {{/with}}
+
+                <hr>
+
+                {{#with contact}}
+                <h3>{{title}}</h3>
+                <div class="row mt-4">
+                    <div class="col-5">
+                        {{#with surname}}
+                        <label class="form label">{{label}}</label>
+                        <input class="form-control" placeholder="{{placeholder}}">
+                        <div class="form text">{{caption}}</div>
+                        {{/with}}
+                    </div>
+
+                    <ol class="col-5">
+                        {{#with name}}
+                        <label class="form label">{{label}}</label>
+                        <input class="form-control" placeholder="{{placeholder}}">
+                        <div class="form text">{{caption}}</div>
+                        {{/with}}
+                    </ol>
+
+                    <div class="col-5 mt-3">
+                        {{#with phone}}
+                        <label class="form label">{{label}}</label>
+                        <input class="form-control" placeholder="{{placeholder}}">
+                        <div class="form text">{{caption}}</div>
+                        {{/with}}
+                    </div>
+
+                    <div class="col-5 mt-3">
+                        {{#with email}}
+                        <label class="form label">{{label}}</label>
+                        <input class="form-control" placeholder="{{placeholder}}">
+                        <div class="form text">{{caption}}</div>
+                        {{/with}}
+                    </div>
+                </div>
+                {{/with}}
+
+                <hr>
+
+                {{#with coment}}
+                <div class="row">
+                    <div class="col-8">
+                        <label class="form label">{{label}}</label>
+                        <input class="form-control" placeholder="{{placeholder}}">
+                    </div>
+                </div>
+                {{/with}}
+                {{/with}}
+
+                <hr>
+
+
+                {{#with coupon}}
+                <h3>{{title}}</h3>
+                {{#with select}}
+                <div class="col-8">
+                    {{#with availabel_coupon}}
+                    <label class="form-label mt-2">{{label}}</label>
+                    <select class="form-select form-select-lg">
+                        <option selected>{{placeholder}}</option>
+                        {{#each options}}
+                        <option value="{{value}}">{{text}}</option>
+                        {{/each}}
+                    </select>
+                    {{/with}}
+                </div>
+
+                <div class="col-8">
+                    {{#with friend_coupon}}
+                    <label class="form-label mt-2">{{label}}</label>
+                    <select class="form-select form-select-sm">
+                        <option selected>{{placeholder}}</option>
+                        {{#each options}}
+                        <option value="{{value}}">{{text}}</option>
+                        {{/each}}
+                    </select>
+                    {{/with}}
+                </div>
+                {{/with}}
+
+                <div class="col-8">
+                    {{#with add}}
+                    {{#with friend}}
+                    <label class="form-label mt-2">{{label}}</label>
+                    <input class="form-control" placeholder="{{placeholder}}">
+                    <div class="form text">{{caption}}</div>
+                    {{/with}}
+
+                    {{#with colleague}}
+                    <label class="form-label mt-2">{{label}}</label>
+                    <input class="form-control" placeholder="{{placeholder}}">
+                    <div class="form text">{{caption}}</div>
+                </div>
+                {{/with}}
+                {{/with}}
+                {{/with}}
+
+                <hr>
+</main>
             {{#with delivery}}
             <h3>{{title}}</h3>
             {{#each select}}
@@ -290,4 +472,5 @@
 
 
 
-</main>0
+</main>
+

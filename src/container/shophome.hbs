@@ -38,9 +38,16 @@
             <ul class="nav nav-tabs">
                 {{#each tabs}}
                 <li class="nav-item mb-5">
+
+                    <a href="#"
+                        class="nav-link {{#if isActive}} active {{/if}} {{#if isDisabled}} disabled {{/if}}"></a>
+
+                <li>
+
                     <a href="#" class="nav-link {{#if isActive}} active {{/if}} {{#if isDisabled}} disabled {{/if}}"
 
                <li>
+
                     <a href="#" class="nav-link
                     {{#if isActive}}
                     active {{/if}}

@@ -123,7 +123,21 @@
 
 
     <div class="row">
-        <div class="col-2">
+    <div class="row g-5">
+
+        {{#each footer}}
+        <div class="nav col-2">
+            <div>
+                {{#each this}}
+                <div>
+                    <a class="nav-1" href="{{link}}">{{text}}</a>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</main>
 
             {{#each footer}}
 

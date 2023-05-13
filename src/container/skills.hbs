@@ -3,45 +3,44 @@
 в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/summary"
 --}}
 
-<div>
-    {{#with main}}
-    <main>
-        <section>
-            {{> title data="All skills" big=false }}
-            <ul>
-                {{#each skills}}
-                <li>
-                    {{name}}
+<main>
+    <div class="row">
+        <div class="col-6 mt-5">
+            {{#with main}}
+            <section>
+                <div class="alert alert-danger">{{> title data="All skills" big=false }}</div>
+                <ul class="list-group list-group-flush">
+                    {{#each skills}}
+                    <li class="list-group-item">
+                        {{name}}
+                        {{#if point includeZero=true}} ({{point}}) {{/if}}
+                        {{#if isTop}} (TOP) {{/if}}
+                        {{#unless point includeZero=true}} (не вивчаємо) {{/unless}}
+                        {{#unless point}}
+                        {{#if point includeZero=true}}
+                        (зараз вивчаємо)
+                        {{/if}}
+                        {{/unless}}
+                    </li>
+                    {{/each}}
+                </ul>
+            </section>
+        </div>
 
-                    {{#if point includeZero=true}} ({{point}}) {{/if}}
-                    {{#if isTop}} (TOP) {{/if}}
-
-                    {{#unless point includeZero=true}} (не вивчаємо) {{/unless}}
-
-                    {{#unless point}}
-                    {{#if point includeZero=true}}
-                    (зараз вивчаємо)
-                    {{/if}}
-                    {{/unless}}
-
-
-                </li>
-                {{/each}}
-            </ul>
-        </section>
-
-        <section>
-            {{> title data="My hobbies"}}
-            <ol>
-                {{#each hobbies}}
-                <li>{{name}}</li>
-                {{#if isMain}} (favourite) {{/if}}
-                {{/each}}
-            </ol>
-        </section>
-    </main>
-    {{/with}}
-</div>
+        <div class="col-6 mt-5">
+            <section>
+                <div class="alert alert-warning">{{> title data="My hobbies"}}</div>
+                <ul class="list-group list-group-flush">
+                    {{#each hobbies}}
+                    <li class="list-group-item">{{name}}</li>
+                    {{#if isMain}} (favourite) {{/if}}
+                    {{/each}}
+                </ul>
+            </section>
+            {{/with}}
+        </div>
+    </div>
+</main>
 
 {{!--
 Цей код містить лише те, що буде виводитись в {{{body}}} в layout/default.hbs

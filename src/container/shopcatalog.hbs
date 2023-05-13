@@ -12,19 +12,19 @@
         {{/with}}
     </div>
 
-    <div class="row">
-        {{#each breadcrumb}}
-        <div class="col-1 mt-5">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item active"><a href="{{url}}">{{name}}</a></li>
-                {{!--
-                {{#if url}}
-                <li class="breadcrumb-item active" aria-current="page">{{name}}</li>
-                {{/if}} --}}
-            </ol>
-        </div>
-        {{/each}}
+
+    <div class="mt-5">
+        <ol class="breadcrumb">
+            {{#each breadcrumb}}
+            {{#if @last}}
+            <li class="breadcrumb-item active">{{name}}</li>
+            {{else}}
+            <li class="breadcrumb-item "> <a href="{{url}}">{{name}}</a></li>
+            {{/if}}
+            {{/each}}
+        </ol>
     </div>
+
 
     <h1 class="mt-5 mb-4">{{header}}</h1>
 

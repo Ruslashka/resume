@@ -1,70 +1,48 @@
 <div class="row">
     <div class="card">
-        {{#each reviewList}}
         <div class="card m-3">
-            {{#with title}}
             <div class="m-2">
-                <h5>{{userName}}</h5>
-                <p>{{caption}}</p>
-                <p>{{date}}</p>
+                <h5></h5>
+                <p></p>
             </div>
-            {{/with}}
+
             <hr>
 
-            {{#with reviewBody}}
-            {{#with seller}}
             <div class="m-1 mb-3">
-                <p>{{title}}: {{value}}</p>
+                </p>
             </div>
-            {{/with}}
+            <div class="m-1 mb-3">
+                <p></p>
+            </div>
 
-            {{#with rating}}
             <div class="m-1 mb-3">
-                <p>{{title}}: {{value}}</p>
-            </div>
-            {{/with}}
 
-            {{#each text}}
-            <div class="m-1 mb-3">
-                {{this}}
             </div>
-            {{/each}}
 
-            {{#with advantages}}
             <div class="m-1 mb-3">
-                <strong>{{title}}:</strong>
-                <p>{{text}}</p>
-            </div>
-            {{/with}}
 
-            {{#with disadvantages}}
-            <div class="m-1 mb-3">
-                <strong>{{title}}:</strong>
-                <p>{{text}}</p>
+                <p></p>
             </div>
-            {{/with}}
+            <div class="m-1 mb-3">
+                <p></p>
+            </div>
 
             <div class="row">
-                {{#each images}}
                 <div class="m-1 mb-3 col-1">
                     <img src="https://picsum.photos/110/100" alt="photo">
                 </div>
-                {{/each}}
+
             </div>
         </div>
 
         <div class="col-11">
             <div class="card ms-5 mt-3 m-3">
-                {{#each coments}}
                 <div class="m-3">
-                    <h5>{{userName}}</h5>
-                    <date>{{date}}</date>
-                    <p>{{text}}</p>
+                    <h5></h5>
+                    <date></date>
+                    <p></p>
                 </div>
-                {{/each}}
             </div>
         </div>
-        {{/with}}
-        {{/each}}
     </div>
 </div>

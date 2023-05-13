@@ -53,9 +53,8 @@ router.get('/summary', function (req, res) {
   res.render('summary', {
     layout: 'basic',
     // ↙ сюди вводимо JSON дані
-    layout: 'basic',
-
-    page: {
+ 
+   page: {
       title: 'Resume | Summary',
       big: true,
     },
@@ -1078,9 +1077,22 @@ router.get('/js', function (req, res) {
   })
 })
 
+
 // router.get Створює нам один ентпоїнт
 
 // ================================================================
+
+=======
+
+// router.get Створює нам один ентпоїнт
+
+
+
+
+// ================================================================
+
+
+
 
 //              ↙ тут вводимо шлях (PATH) до сторінки
 router.get('/bio', function (req, res) {
@@ -2818,6 +2830,9 @@ router.get('/shopcart', function (req, res) {
       },
     ],
 
+
+
+
     header: {
       title: 'Кошик',
       button: {
@@ -3325,6 +3340,9 @@ router.get('/shopreview', function (req, res) {
   //                  ↑↑ сюди вводимо JSON дані
 })
 
+
+
+
 //           ↙ тут вводимо шлях (PATH) до сторінки
 router.get('/shopcatalog', function (req, res) {
   // res.render генерує нам HTML сторінку
@@ -3700,6 +3718,7 @@ router.get('/shopcatalog', function (req, res) {
 
 // ================================================================
 
+
 //           ↙ тут вводимо шлях (PATH) до сторінки
 router.get('/index8', function (req, res) {
   // res.render генерує нам HTML сторінку
@@ -3710,5 +3729,6 @@ router.get('/index8', function (req, res) {
   })
   //                  ↑↑ сюди вводимо JSON дані
 })
+
 // ================================================================
 module.exports = router

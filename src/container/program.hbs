@@ -1,93 +1,94 @@
-<div>
-    <main>
-        {{#with program}}
-        {{#with excursion}}
-        <div>
-            <h1>Excursion {{name}}</h1>
-        </div>
-        {{#with location}}
-        <div>
-            <address>{{city}}, {{country}}</address>
-            <br>
-            <time>({{../date}})</time>
-        </div>
-        {{/with}}
-        <hr>
-        <div>
-            <ul>
-                {{#with program.[0]}}
-                <li>
-                    <h2>{{name}}</h2>
-                </li>
-                <div>type: {{type}}</div>
-                <div>duration: ({{duration}} hours)</div>
-                {{#with details}}
-                {{#with museum}}
-                <h3>{{name}}</h3>
-                {{#with location}}
-                <address>
-                    {{address}}, {{city}}, {{country}}
-                </address>
-                {{/with}}
+<main class="p-5">
+    <div class="row">
+        <div class="card col-4 bg-dark text-primary">
+            {{#with program}}
+            {{#with excursion}}
+            <div>
+                <h1>Excursion {{name}}</h1>
+            </div>
+            {{#with location}}
+            <div>
+                <address>{{city}}, {{country}}</address>
                 <br>
+                <time>({{../date}})</time>
+            </div>
+            {{/with}}
+            <hr>
+            <div>
                 <ul>
-                    {{#each exhibits}}
-                    <li><b>{{name}}</b></li>
-                    {{#unless artist}}
-                    artist: unknown
-                    {{else}}
-                    <div>artist: {{artist}}</div>
-                    {{/unless}}
-                    <div>{{description}}</div>
-                    {{#if audio_guide}}
-                    {{#with ../../guide}}
-                    <div>guide: {{name}}</div>
-                    <div>language: {{language}}</div>
-                    <div>rating: ({{rating}})</div>
+                    {{#with program.[0]}}
+                    <li>
+                        <h2>{{name}}</h2>
+                    </li>
+                    <div>type: {{type}}</div>
+                    <div>duration: ({{duration}} hours)</div>
+                    {{#with details}}
+                    {{#with museum}}
+                    <h3>{{name}}</h3>
+                    {{#with location}}
+                    <address>
+                        {{address}}, {{city}}, {{country}}
+                    </address>
                     {{/with}}
-                    {{/if}}
                     <br>
-                    {{/each}}
-                </ul>
-                {{/with}}
-                {{/with}}
-                {{/with}}
-
-                {{#with program.[1]}}
-                <li>
-                    <h2>{{name}}</h2>
-                </li>
-                <div>type: {{type}}</div>
-                <div>duration: ({{duration}} hours)</div>
-                {{#with details}}
-                {{#with venue}}
-                <h3>{{name}}</h3>
-                {{#with location}}
-                <address>
-                    {{address}}, {{city}}, {{country}}
-                </address>
-                {{/with}}
-                <br>
-                {{/with}}
-                <ul>
-                    {{#each performers}}
-                    <li><strong>{{name}}</strong></li>
-                    <div>{{type}}</div>
-                    {{#if ../guide}}
-                    {{#with ../guide}}
-                    <div>guide: {{name}}</div>
-                    <div>language: {{language}}</div>
-                    <div>rating: ({{rating}})</div>
+                    <ul>
+                        {{#each exhibits}}
+                        <li><b>{{name}}</b></li>
+                        {{#unless artist}}
+                        artist: unknown
+                        {{else}}
+                        <div>artist: {{artist}}</div>
+                        {{/unless}}
+                        <div>{{description}}</div>
+                        {{#if audio_guide}}
+                        {{#with ../../guide}}
+                        <div>guide: {{name}}</div>
+                        <div>language: {{language}}</div>
+                        <div>rating: ({{rating}})</div>
+                        {{/with}}
+                        {{/if}}
+                        <br>
+                        {{/each}}
+                    </ul>
                     {{/with}}
-                    {{/if}}
+                    {{/with}}
+                    {{/with}}
+                    {{#with program.[1]}}
+                    <li>
+                        <h2>{{name}}</h2>
+                    </li>
+                    <div>type: {{type}}</div>
+                    <div>duration: ({{duration}} hours)</div>
+                    {{#with details}}
+                    {{#with venue}}
+                    <h3>{{name}}</h3>
+                    {{#with location}}
+                    <address>
+                        {{address}}, {{city}}, {{country}}
+                    </address>
+                    {{/with}}
                     <br>
-                    {{/each}}
+                    {{/with}}
+                    <ul>
+                        {{#each performers}}
+                        <li><strong>{{name}}</strong></li>
+                        <div>{{type}}</div>
+                        {{#if ../guide}}
+                        {{#with ../guide}}
+                        <div>guide: {{name}}</div>
+                        <div>language: {{language}}</div>
+                        <div>rating: ({{rating}})</div>
+                        {{/with}}
+                        {{/if}}
+                        <br>
+                        {{/each}}
+                    </ul>
+                    {{/with}}
+                    {{/with}}
                 </ul>
-                {{/with}}
-                {{/with}}
-            </ul>
+            </div>
+            {{/with}}
+            {{/with}}
         </div>
-        {{/with}}
-        {{/with}}
-    </main>
-</div>
+    </div>
+</main>

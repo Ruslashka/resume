@@ -1,5 +1,5 @@
-<div>
-    <main>
+<main class="p-5">
+    <div>
         <span class="badge text-bg-dark">{{> title data="Apple Mac" big=false }}</span>
         <hr><br>
         <div>
@@ -22,80 +22,83 @@
                 <h4>Processor</h4>
             </span>
         </div>
-        <div>
-            {{#with features}}
-            {{#with processor}}
-            <span class="badge text-bg-warning">
-                <div>brand: {{brand}}</div>
-                <div>model: {{model}}</div>
-                <div>speed: {{speed}}</div>
-                <div>cores: {{cores}}</div>
-                <div>cache: {{cache}}</div>
-            </span>
-        </div>
-        {{/with}}
-        <br>
+        {{#with features}}
 
-        <div>
-            <span class="badge rounded-pill text-bg-primary">
-                <h4>Memory</h4>
-            </span>
-        </div>
-        <br>
-        {{#with memory}}
-        <span class="badge text-bg-warning">
-            <div>type: {{type}}</div>
-            <div>size: {{size}}</div>
-            <div>speed: {{speed}}</div>
-        </span>
-        {{/with}}
-        <br>
+        <div class="row">
+            <div class="col-2">
+                {{#with processor}}
+                <span class="badge text-bg-warning">
+                    <div>brand: {{brand}}</div>
+                    <div>model: {{model}}</div>
+                    <div>speed: {{speed}}</div>
+                    <div>cores: {{cores}}</div>
+                    <div>cache: {{cache}}</div>
+                </span>
+            </div>
+            {{/with}}
+            <br>
 
-        <div>
-            <span class="badge rounded-pill text-bg-primary">
-                <h4>Storage</h4>
-            </span>
-        </div>
-        <br>
-        {{#with storage}}
-        <span class="badge text-bg-warning">
-            <div>type: {{type}}</div>
-            <div>size: {{size}}</div>
-        </span>
-        {{/with}}
-        <br>
+            <div class="col-2">
+                <span class="badge rounded-pill text-bg-primary">
+                    <h4>Memory</h4>
+                </span>
+                <br>
+                {{#with memory}}
+                <span class="badge text-bg-warning">
+                    <div>type: {{type}}</div>
+                    <div>size: {{size}}</div>
+                    <div>speed: {{speed}}</div>
+                </span>
+                {{/with}}
+            </div>
+            <br>
 
-        <div>
-            <span class="badge rounded-pill text-bg-primary">
-                <h4>Display</h4>
-            </span>
-        </div>
-        <br>
-        {{#with display}}
-        <span class="badge text-bg-warning">
-            <div>size: {{size}}</div>
-            <div>resolution: {{resolution}}</div>
-            <div>technology: {{technology}}</div>
-            <div>color_space: {{color_space}}</div>
-            <div>brightness: {{brightness}}</div>
-            <div>refresh_rate: {{refresh_rate}}</div>
-        </span>
-        {{/with}}
-        <br>
+            <div class="col-2">
+                <span class="badge rounded-pill text-bg-primary">
+                    <h4>Storage</h4>
+                </span>
+                <br>
+                {{#with storage}}
+                <span class="badge text-bg-warning">
+                    <div>type: {{type}}</div>
+                    <div>size: {{size}}</div>
+                </span>
+                {{/with}}
+            </div>
+            <br>
 
-        <div>
-            <span class="badge rounded-pill text-bg-primary">
-                <h4>Graphics</h4>
-            </span>
+            <div class="col-2">
+                <span class="badge rounded-pill text-bg-primary">
+                    <h4>Display</h4>
+                </span>
+                <br>
+                {{#with display}}
+                <span class="badge text-bg-warning">
+                    <div>size: {{size}}</div>
+                    <div>resolution: {{resolution}}</div>
+                    <div>technology: {{technology}}</div>
+                    <div>color_space: {{color_space}}</div>
+                    <div>brightness: {{brightness}}</div>
+                    <div>refresh_rate: {{refresh_rate}}</div>
+                </span>
+                {{/with}}
+            </div>
+            <br>
+
+            <div class="col-2">
+                <span class="badge rounded-pill text-bg-primary">
+                    <h4>Graphics</h4>
+                </span>
+                <br>
+                {{#with graphics}}
+                <span class="badge text-bg-warning">
+                    <div>brand: {{brand}}</div>
+                    <div>model: {{model}}</div>
+                    <div>memory: {{memory}}</div>
+                </span>
+                {{/with}}
+            </div>
         </div>
-        <br>
-        {{#with graphics}}
-        <span class="badge text-bg-warning">
-            <div>brand: {{brand}}</div>
-            <div>model: {{model}}</div>
-            <div>memory: {{memory}}</div>
-        </span>
-        {{/with}}
         <hr>
         <br>
 
@@ -177,5 +180,5 @@
             {{/each}}
         </ul>
         {{/with}}
-    </main>
-</div>
+    </div>
+</main>

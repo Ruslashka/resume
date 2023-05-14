@@ -53,8 +53,8 @@ router.get('/summary', function (req, res) {
   res.render('summary', {
     layout: 'basic',
     // ↙ сюди вводимо JSON дані
- 
-   page: {
+
+    page: {
       title: 'Resume | Summary',
       big: true,
     },
@@ -288,7 +288,7 @@ router.get('/work', function (req, res) {
 router.get('/person', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('person', {
-    layout: 'person',
+    layout: 'basic',
 
     person: {
       name: 'Emma Johnson',
@@ -394,7 +394,7 @@ router.get('/person', function (req, res) {
 router.get('/bio', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('bio', {
-    layout: 'bio',
+    layout: 'basic',
 
     name: 'Albert Einstein',
     birthdate: 'March 14, 1879',
@@ -677,98 +677,6 @@ router.get('/car', function (req, res) {
 })
 
 // ================================================================
-
-// ================================================================
-
-// router.get Створює нам один ентпоїнт
-
-router.get('/mac', function (req, res) {
-  // res.render генерує нам HTML сторінку
-
-  //            ↙ cюди вводимо назву файлу з сontainer
-  res.render('mac', {
-    layout: 'basic',
-
-    name: 'Apple MacBook Pro',
-    description: 'The ultimate notebook for power users',
-    price: 1999.99,
-    category: 'Computers & Tablets',
-    features: {
-      processor: {
-        brand: 'Intel',
-        model: 'Core i9',
-        speed: '2.3 GHz',
-        cores: 8,
-        cache: '16 MB',
-      },
-      memory: {
-        type: 'DDR4',
-        size: '32 GB',
-        speed: '2666 MHz',
-      },
-      storage: {
-        type: 'SSD',
-        size: '1 TB',
-      },
-      display: {
-        size: '16 inches',
-        resolution: '3072x1920',
-        technology: 'Retina',
-        color_space: 'P3',
-        brightness: '500 nits',
-        refresh_rate: '60 Hz',
-      },
-      graphics: {
-        brand: 'AMD',
-        model: 'Radeon Pro 5500M',
-        memory: '4 GB GDDR6',
-      },
-      ports: [
-        {
-          type: 'Thunderbolt 3',
-          count: 4,
-          features: [
-            'Charging',
-            'DisplayPort',
-            'Thunderbolt (up to 40 Gbps)',
-            'USB 3.1 Gen 2 (up to 10 Gbps)',
-          ],
-        },
-        {
-          type: 'HDMI',
-          count: 1,
-        },
-      ],
-      battery: {
-        type: 'Lithium Polymer',
-        capacity: '100 Wh',
-        life: 'Up to 11 hours',
-      },
-      weight: '4.3 pounds',
-      dimensions: {
-        height: '0.64 inch',
-        width: '14.09 inches',
-        depth: '9.68 inches',
-      },
-      operating_system: 'macOS',
-      accessories: [
-        {
-          name: 'Apple Magic Keyboard',
-          price: 99.99,
-        },
-        {
-          name: 'Apple Magic Mouse 2',
-          price: 79.99,
-        },
-        {
-          name: 'USB-C to USB Adapter',
-          price: 19.99,
-        },
-      ],
-    },
-  })
-})
-// ============================
 
 // ============================
 
@@ -1077,22 +985,14 @@ router.get('/js', function (req, res) {
   })
 })
 
-
 // router.get Створює нам один ентпоїнт
 
 // ================================================================
 
 
-
 // router.get Створює нам один ентпоїнт
 
-
-
-
-// ================================================================
-
-
-
+// ===============================================================
 
 //              ↙ тут вводимо шлях (PATH) до сторінки
 router.get('/bio', function (req, res) {
@@ -2830,9 +2730,6 @@ router.get('/shopcart', function (req, res) {
       },
     ],
 
-
-
-
     header: {
       title: 'Кошик',
       button: {
@@ -3340,9 +3237,6 @@ router.get('/shopreview', function (req, res) {
   //                  ↑↑ сюди вводимо JSON дані
 })
 
-
-
-
 //           ↙ тут вводимо шлях (PATH) до сторінки
 router.get('/shopcatalog', function (req, res) {
   // res.render генерує нам HTML сторінку
@@ -3717,7 +3611,6 @@ router.get('/shopcatalog', function (req, res) {
 })
 
 // ================================================================
-
 
 //           ↙ тут вводимо шлях (PATH) до сторінки
 router.get('/index8', function (req, res) {

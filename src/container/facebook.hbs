@@ -1,110 +1,118 @@
-<div>
-    <main>
-        <span class="badge text-bg-primary">{{> title data="Facebook" big=false }}</span>
+<main class="p-5">
+    <div>
+        <span class="badge text-bg-info">{{> title data="Facebook" big=false }}</span>
         <hr>
         <br>
         <div>
-            <ul>Users:{{#each users}}
-                <li>id: {{id}} </li>
-                <li>name: {{name}} </li>
-                <li>gender: {{gender}} </li>
-                <li>age: {{age}} </li>
+            <ul class="list-group list-group-flush">
+                <div class="alert alert-primary">Users:</div>
+                {{#each users}}
+                <li class="list-group-item">id: {{id}} </li>
+                <li class="list-group-item">name: {{name}} </li>
+                <li class="list-group-item">gender: {{gender}} </li>
+                <li class="list-group-item">age: {{age}} </li>
             </ul>
         </div>
         <br>
         <div>
-            <ul>
-                Friends: {{#each friends}}
-                <li>id: {{id}} </li>
-                <li>name: {{name}} </li>
-                <li>gender: {{gender}} </li>
-                <li>age: {{age}} </li>
+            <ul class="list-group list-group-flush">
+                <div class="alert alert-primary">Friends: </div>
+                {{#each friends}}
+                <li class="list-group-item">id: {{id}} </li>
+                <li class="list-group-item">name: {{name}} </li>
+                <li class="list-group-item">gender: {{gender}} </li>
+                <li class="list-group-item">age: {{age}} </li>
             </ul>
         </div>
         <br>
         <div>
-            <ul>
-                Mutual_friends: {{#each mutual_friends}}
-                <li>id: {{id}} </li>
-                <li>name: {{name}} </li>
-                <li>gender: {{gender}} </li>
-                <li>age: {{age}} </li>
+            <ul class="list-group list-group-flush">
+                <div class="alert alert-primary">Mutual_friends:</div>
+                {{#each mutual_friends}}
+                <li class="list-group-item">id: {{id}} </li>
+                <li class="list-group-item">name: {{name}} </li>
+                <li class="list-group-item">gender: {{gender}} </li>
+                <li class="list-group-item">age: {{age}} </li>
                 {{/each}}
             </ul>
         </div>
         <br>
         <div>
-            <ul>
-                Mutual_friends: {{#each mutual_friends}}
-                <li>id: {{id}} </li>
-                <li>name: {{name}} </li>
-                <li>gender: {{gender}} </li>
-                <li>age: {{age}} </li>
+            <ul class="list-group list-group-flush">
+                <div class="alert alert-primary">Mutual_friends:</div>
+                {{#each mutual_friends}}
+                <li class="list-group-item">id: {{id}} </li>
+                <li class="list-group-item">name: {{name}} </li>
+                <li class="list-group-item">gender: {{gender}} </li>
+                <li class="list-group-item">age: {{age}} </li>
                 {{/each}}
             </ul>
         </div>
         <div>
-            <ul>
+            <ul class="list-group list-group-flush">
                 {{#if groups}}
-                Groups: {{#each groups}}
-                <li>id:{{id}}</li>
-                <li>name:{{name}}</li>
-                <li>description:{{description}}</li>
+                <div class="alert alert-primary">Groups:</div>
+                {{#each groups}}
+                <li class="list-group-item">id:{{id}}</li>
+                <li class="list-group-item">name:{{name}}</li>
+                <li class="list-group-item">description:{{description}}</li>
             </ul>
         </div>
         <br>
         <div>
-            <ul>
-                Members: {{#each members}}
-                <li>id: {{id}} </li>
-                <li>name: {{name}} </li>
-                <li>gender: {{gender}} </li>
-                <li>age: {{age}} </li>
+            <ul class="list-group list-group-flush">
+                <div class="alert alert-primary">Members:</div>
+                {{#each members}}
+                <li class="list-group-item">id: {{id}} </li>
+                <li class="list-group-item">name: {{name}} </li>
+                <li class="list-group-item">gender: {{gender}} </li>
+                <li class="list-group-item">age: {{age}} </li>
                 {{/each}}
             </ul>
         </div>
         <br>
         <div>
-            <ul>
-                Members: {{#each members}}
-                <li>id: {{id}} </li>
-                <li>name: {{name}} </li>
-                <li>gender: {{gender}} </li>
-                <li>age: {{age}} </li>
+            <ul class="list-group list-group-flush">
+                <div class="alert alert-primary">Members:</div>
+                {{#each members}}
+                <li class="list-group-item">id: {{id}} </li>
+                <li class="list-group-item">name: {{name}} </li>
+                <li class="list-group-item">gender: {{gender}} </li>
+                <li class="list-group-item">age: {{age}} </li>
                 {{/each}}
             </ul>
         </div>
         {{/each}}
         {{/if}}
         <div>
-            <ul>
+            <ul class="list-group list-group-flush">
                 {{#each friends}}
-                <li>id: {{id}} </li>
-                <li>name: {{name}} </li>
-                <li>gender: {{gender}} </li>
-                <li>age: {{age}} </li>
-            </ul>
+                <li class="list-group-item">id: {{id}} </li>
+                <li class="list-group-item">name: {{name}} </li>
+                <li class="list-group-item">gender: {{gender}} </li>
+                <li class="list-group-item">age: {{age}} </li>
+            </ul class="list-group list-group-flush">
         </div>
         <br>
         <div>
             <ul>
 
                 {{#each mutual_friends}}
-                <li>id: {{id}} </li>
-                <li>name: {{name}} </li>
-                <li>gender: {{gender}} </li>
-                <li>age: {{age}} </li>
+                <li class="list-group-item">id: {{id}} </li>
+                <li class="list-group-item">name: {{name}} </li>
+                <li class="list-group-item">gender: {{gender}} </li>
+                <li class="list-group-item">age: {{age}} </li>
             </ul>
         </div>
         <br>
         <div>
-            <ul>
+            <ul class="list-group list-group-flush">
                 {{#if mutual_friends}}
                 {{#each mutual_friends}}
-                <li>id: {{id}} </li>
-                <li>name: {{name}} </li>
-                <li>gender: {{gender}} </li>
-                <li>age: {{age}} </li>
+                <li class="list-group-item">id: {{id}} </li>
+                <li class="list-group-item">name: {{name}} </li>
+                <li class="list-group-item">gender: {{gender}} </li>
+                <li class="list-group-item">age: {{age}} </li>
                 {{/each}}
                 {{/if}}
             </ul>
@@ -113,33 +121,34 @@
 
         <br>
         <div>
-            <ul>
+            <ul class="list-group list-group-flush">
                 {{#if groups}}
-                Groups: {{#each groups}}
-                <li>id:{{id}}</li>
-                <li>name:{{name}}</li>
-                <li>description:{{description}}</li>
+                <div class="alert alert-primary">Groups: </div>
+                {{#each groups}}
+                <li class="list-group-item">id:{{id}}</li>
+                <li class="list-group-item">name:{{name}}</li>
+                <li class="list-group-item">description:{{description}}</li>
             </ul>
         </div>
         <br>
         <div>
-            <ul>
+            <ul class="list-group list-group-flush">
                 {{#each members}}
-                <li>id: {{id}} </li>
-                <li>name: {{name}} </li>
-                <li>gender: {{gender}} </li>
-                <li>age: {{age}} </li>
+                <li class="list-group-item">id: {{id}} </li>
+                <li class="list-group-item">name: {{name}} </li>
+                <li class="list-group-item">gender: {{gender}} </li>
+                <li class="list-group-item">age: {{age}} </li>
                 {{/each}}
             </ul>
         </div>
         <br>
         <div>
-            <ul>
+            <ul class="list-group list-group-flush">
                 {{#each members}}
-                <li>id: {{id}} </li>
-                <li>name: {{name}} </li>
-                <li>gender: {{gender}} </li>
-                <li>age: {{age}} </li>
+                <li class="list-group-item">id: {{id}} </li>
+                <li class="list-group-item">name: {{name}} </li>
+                <li class="list-group-item">gender: {{gender}} </li>
+                <li class="list-group-item">age: {{age}} </li>
                 {{/each}}
             </ul>
         </div>
@@ -148,5 +157,5 @@
         {{/each}}
         {{/each}}
         {{/each}}
-    </main>
-</div>
+    </div>
+</main>
